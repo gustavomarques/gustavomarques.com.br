@@ -1,0 +1,460 @@
+// ------------------------------------------------------------------
+// General
+// ------------------------------------------------------------------
+
+.onepage-pagination
+	z-index: 100
+
+// ------------------------------------------------------------------
+// Loader
+// ------------------------------------------------------------------
+
+#menu
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background: #db122a
+	z-index: 100
+	+transition
+
+	#logo
+		color: $brancoCinza
+		font-size: 80px
+		height: 80px
+		width: 80px
+		margin-left: -40px
+		margin-top: -40px
+		position: fixed
+		left: 50%
+		top: 50%
+		+fontIcon
+		+scale(3)
+		+transition
+		+box-sizing(border-box)
+		border: 2px solid $brancoCinza
+		overflow: hidden
+
+		#g, #nome, #label
+			display: block
+			float: left
+			text-align: center
+			position: absolute
+			top: 0
+
+		#g
+			left: 0
+			width: 80px
+			height: 80px
+			line-height: 78px
+
+		#nome, #label
+			left: 80px
+			right: 0
+			width: 280px
+
+		#nome
+			height: 50px
+			font-size: 24px
+			+fontBold
+			border-bottom: 0
+			line-height: 50px
+			left: 80px
+
+		#label
+			border-top: 2px solid $brancoCinza
+			height: 30px
+			font-size: 14px
+			+font
+			line-height: 30px
+			top: auto
+			bottom: 0
+
+
+@-webkit-keyframes logo
+	0%
+		width: 80px
+		height: 80px
+		margin-left: -40px
+		margin-top: -40px
+		top: 50%
+		+scale(3)
+
+	50%
+		top: 20%
+		width: 80px
+		height: 80px
+		margin-left: -40px
+		margin-top: -40px
+		+scale(1)
+	100%
+		top: 20%
+		width: 360px
+		margin-left: -180px
+		+scale(1)
+
+
+@-webkit-keyframes logoCenter
+	0%
+		top: 20%
+		width: 360px
+		margin-left: -180px
+		+scale(1)
+
+	50%
+		top: 20%
+		width: 80px
+		height: 80px
+		margin-left: -40px
+		margin-top: -40px
+		+scale(1)
+
+	100%
+		width: 80px
+		height: 80px
+		margin-left: -40px
+		margin-top: -40px
+		top: 50%
+		+scale(2)
+
+
+@-webkit-keyframes bgLoader
+	0%
+		background: #db122a
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+	50%
+		background: #db122a
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+	99%
+		background: none
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+	100%
+		top: auto
+		left: auto
+		right: auto
+		bottom: auto
+
+@-webkit-keyframes roll
+	0%
+		top: 5px
+	100%
+		top: 15px
+	
+
+.pace-done
+	#menu
+		+animate(bgLoader)
+		#logo
+			+animate(logo)
+		
+	&.viewing-page-1
+		#cover
+			.roll
+				+animate($name: zoomInDown, $delay: 1s)
+				.scroll
+					+animate($name: roll, $delay: 2s, $function: infinite)
+
+	&.viewing-page-2, &.viewing-page-3, &.viewing-page-4, &.viewing-page-5, &.viewing-page-6, &.viewing-page-7, &.viewing-page-8
+		#menu
+			#logo
+				+animate(logoCenter)
+
+
+
+
+// ------------------------------------------------------------------
+// General - home
+// ------------------------------------------------------------------
+
+@-webkit-keyframes title
+	0%
+		opacity: 0
+		-webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
+		transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
+		-webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	20%
+		opacity: 1
+		-webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
+		transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
+		-webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1)
+		animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1)
+
+	40%
+		opacity: 1
+		-webkit-transform: none
+		transform: none
+
+	60%
+		opacity: 1
+		-webkit-transform: none
+		transform: none
+
+	80%
+		opacity: 0
+		-webkit-transform: scale3d(0.3, 0.3, 0.3)
+		transform: scale3d(0.3, 0.3, 0.3)
+	100%
+		opacity: 0
+
+
+@keyframes title
+	0%
+		opacity: 0
+		-webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
+		transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
+		-webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	20%
+		opacity: 1
+		-webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
+		transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
+		-webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1)
+		animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1)
+
+	40%
+		opacity: 1
+		-webkit-transform: none
+		transform: none
+
+	60%
+		opacity: 1
+		-webkit-transform: none
+		transform: none
+
+	80%
+		opacity: 0
+		-webkit-transform: scale3d(0.3, 0.3, 0.3)
+		transform: scale3d(0.3, 0.3, 0.3)
+	100%
+		opacity: 0
+
+
+#wrapper
+	& > section
+		background: #db122a
+
+		.title
+			h1
+				font-size: 100px
+				position: absolute
+				text-align: center
+				left: 0
+				right: 0
+				top: 50%
+				display: block
+				+fontBold
+				color: $brancoCinza
+				letter-spacing: -3px
+				margin-top: 150px
+				z-index: 100
+
+		.content
+			li
+				position: absolute
+				overflow: hidden
+				display: block
+				+transition
+				+transition-delay(1s)
+				+transition-duration(1s)
+				width: 0
+
+				&:nth-of-type(1)
+					top: 0
+					bottom: 0
+					left: 50%
+					right: 50%
+					background: url(img/home-bio.jpg) center center no-repeat
+					+bgCover
+
+				&:nth-of-type(2)
+					top: 0
+					bottom: 50%
+					left: 50%
+					right: 50%
+					background: url(img/home-bio.jpg) center center no-repeat
+					+bgCover
+
+				&:nth-of-type(3)
+					top: 50%
+					bottom: 0
+					left: 50%
+					right: 50%
+					background: url(img/home-bio.jpg) center center no-repeat
+					+bgCover
+
+				&:nth-of-type(4)
+					top: 50%
+					bottom: 0
+					left: 50%
+					right: 50%
+					background: url(img/home-bio.jpg) center center no-repeat
+					+bgCover
+
+
+
+		&.active
+			.title
+				h1
+					+animate($name: title, $duration: 5s, $delay: 1s)
+			.content
+				li
+					 width: auto
+
+					&:nth-of-type(1)
+						top: 0
+						left: 0
+						bottom: 0
+						right: 50%
+
+					&:nth-of-type(2)
+						top: 0
+						left: 50%
+						bottom: 50%
+						right: 0
+
+					&:nth-of-type(3)
+						top: 50%
+						left: 50%
+						bottom: 0
+						right: 25%
+
+					&:nth-of-type(4)
+						top: 50%
+						left: 75%
+						bottom: 0
+						right: 0
+
+
+
+// ------------------------------------------------------------------
+// Cover
+// ------------------------------------------------------------------
+
+#wrapper > section#cover
+	background: #db122a url(img/bg-tongue.jpg) center center no-repeat
+
+	.bg-over
+		+background-image(radial-gradient(1200px 1200px, transparent 0%, transparent 30%, #d81229 40%, #c20f24 50%, #9d0c1c 60%, #750813 70%, #4d040a 90%, #350104 100%))
+		//+radial-gradient(color-stops(transparent, transparent, #d9122a #9b0c1b #58050c #350104 100%))
+		//+background-image(radial-gradient(center, ellipse cover, transparent 0%, transparent 30%, #d9122a 50%, #d9122a 70%, #d9122a 90%, #d9122a 100%))
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 98
+
+	.roll
+		width: 160px
+		padding-top: 50px
+		margin-left: -80px
+		position: absolute
+		font-size: 20px
+		line-height: 100%
+		text-align: center
+		color: $brancoCinza
+		left: 50%
+		bottom: 10%
+		z-index: 99
+
+		.mouse
+			position: absolute
+			left: 70px
+			top: 0
+			width: 20px
+			height: 40px
+			border: 2px solid $brancoCinza
+			+border-radius(10px)
+			display: block
+
+		.scroll
+			position: absolute
+			width: 4px
+			+border-radius(5px)
+			background: $brancoCinza
+			display: block
+			height: 8px
+			left: 80px
+			+transition
+
+		p
+			+fontText
+			font-style: italic
+			font-size: 20px
+			margin: 0
+
+
+// ------------------------------------------------------------------
+// About
+// ------------------------------------------------------------------
+
+#about
+	//background: $vermelho
+
+
+
+
+// ------------------------------------------------------------------
+// startups
+// ------------------------------------------------------------------
+
+#startups
+	//background: $verde
+
+
+// ------------------------------------------------------------------
+// blog
+// ------------------------------------------------------------------
+
+#blog
+	//background: $amarelo
+
+
+
+// ------------------------------------------------------------------
+// contact
+// ------------------------------------------------------------------
+
+#contact
+	//background: $laranja
+
+
+
+
+
+
+
+
+
+
+
+// ------------------------------------------------------------------
+// About
+// ------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

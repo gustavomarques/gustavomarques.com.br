@@ -1,0 +1,68 @@
+/*
+Error: Inconsistent indentation: "\t\t\t\t\t " was used for indentation, but the rest of the document was indented using 1 tab.
+        on line 312 of /Guto/gustavomarques.com.br/site/front/sass/_layout.sass
+        from line 21 of /Guto/gustavomarques.com.br/site/front/sass/style.sass
+
+307: 			.title
+308: 				h1
+309: 					+animate($name: title, $duration: 5s, $delay: 1s)
+310: 			.content
+311: 				li
+312: 					 width: auto
+313: 
+314: 					&:nth-of-type(1)
+315: 						top: 0
+316: 						left: 0
+317: 						bottom: 0
+
+Backtrace:
+/Guto/gustavomarques.com.br/site/front/sass/_layout.sass:312
+/Guto/gustavomarques.com.br/site/front/sass/style.sass:21
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/engine.rb:473:in `block in tabulate'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/engine.rb:431:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/engine.rb:431:in `each_with_index'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/engine.rb:431:in `tabulate'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/engine.rb:396:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/engine.rb:299:in `to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:307:in `block in visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/stack.rb:88:in `block in with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/stack.rb:88:in `with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:306:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:151:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/engine.rb:268:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/plugin/compiler.rb:329:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/listen-2.7.9/lib/listen/listener.rb:276:in `call'
+/Library/Ruby/Gems/2.0.0/gems/listen-2.7.9/lib/listen/listener.rb:276:in `_process_changes'
+/Library/Ruby/Gems/2.0.0/gems/listen-2.7.9/lib/listen/listener.rb:233:in `block in _wait_for_changes'
+/Library/Ruby/Gems/2.0.0/gems/listen-2.7.9/lib/listen/listener.rb:216:in `loop'
+/Library/Ruby/Gems/2.0.0/gems/listen-2.7.9/lib/listen/listener.rb:216:in `_wait_for_changes'
+/Library/Ruby/Gems/2.0.0/gems/listen-2.7.9/lib/listen/listener.rb:312:in `block in _start_wait_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Inconsistent indentation: \"\t\t\t\t\t \" was used for indentation, but the rest of the document was indented using 1 tab.\A         on line 312 of /Guto/gustavomarques.com.br/site/front/sass/_layout.sass\A         from line 21 of /Guto/gustavomarques.com.br/site/front/sass/style.sass\A \A 307: 			.title\A 308: 				h1\A 309: 					+animate($name: title, $duration: 5s, $delay: 1s)\A 310: 			.content\A 311: 				li\A 312: 					 width: auto\A 313: \A 314: 					&:nth-of-type(1)\A 315: 						top: 0\A 316: 						left: 0\A 317: 						bottom: 0"; }

@@ -1,0 +1,184 @@
+// ------------------------------------------------------------------
+// colors
+// ------------------------------------------------------------------
+
+$branco: #fff
+$preto: #2c2c2c
+$black: #000
+
+$azul: #00a4e0
+$azulEscuro: #003e54
+$amarelo: #f4ff00
+$roxo: #a626ff
+$verdeLimao: #8cff26
+$magenta: #ff2687
+$azulLight: #26d9ff
+$laranja: #ff7826
+$vermelho: #ca0505
+$vermelhoEscuro: #830000
+$verde: #68ff40
+$verdeEscuro: #2a8511
+$marrom: #402d21
+
+$brancoCinza: #f7f7f7
+$cinzaClaro: #b1b3b6
+$cinza: #9c9c9c
+$cinzaEscuro: #414042
+
+
+$textColor: $preto
+$corPrincipal: $azul
+$corPrincipalInverso: $brancoCinza
+
+
+// ------------------------------------------------------------------
+// Scroll css3
+// ------------------------------------------------------------------ 
+
+$corScroll: $corPrincipal
+$corFundoScroll: $cinzaEscuro
+
+::-webkit-scrollbar 
+	width: 3px
+	height: 0px
+	margin: 0px 0px 0px 0px
+
+
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment 
+	display: block
+	height: 0px
+
+
+::-webkit-scrollbar-button:vertical:increment 
+	background-color: none
+
+
+::-webkit-scrollbar-track-piece 
+	background-color: $corFundoScroll
+
+
+::-webkit-scrollbar-thumb:vertical 
+	height: 50px
+	background-color: $corScroll
+	cursor: pointer
+
+
+::-webkit-scrollbar-thumb:horizontal 
+	width: 50px
+	background-color: $corScroll
+	cursor: pointer
+
+
+// ------------------------------------------------------------------
+// Tipography
+// ------------------------------------------------------------------
+
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic)
+@import fonts/guto/style.css
+@import fonts/trocchi/stylesheet.css
+
+@mixin font
+	font-family: 'trocchiregular', 'Georgia', 'helvetica', 'Trebuchet MS', 'Arial', sans-serif
+
+@mixin fontBold
+	font-family: 'trocchi_boldbold', 'Georgia', 'helvetica', 'Trebuchet MS', 'Arial', sans-serif
+
+@mixin fontIcon
+	font-family: 'guto'
+	speak: none
+	font-style: normal
+	font-weight: normal
+	font-variant: normal
+	text-transform: none
+	line-height: 1
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+@mixin fontText($weight: 400)
+	font-family: 'lora'
+	font-weight: $weight
+
+
+// ------------------------------------------------------------------
+// Defaults do Compass
+// ------------------------------------------------------------------
+$default-transition-property : all
+$default-transition-duration : 0.2s
+$default-transition-function : false
+$default-transition-delay    : false
+
+$default-text-shadow-color: rgba(#000, 0.3)
+$default-text-shadow-h-offset: 1px
+$default-text-shadow-v-offset: 1px
+$default-text-shadow-blur: 1px
+
+$default-box-shadow-color: rgba(#000, 0.3)
+$default-box-shadow-h-offset: 0
+$default-box-shadow-v-offset: 2px
+$default-box-shadow-blur: 4px
+$default-box-shadow-spread: 0
+$default-box-shadow-inset: false
+
+
+
+
+
+// ------------------------------------------------------------------
+// Styles Base
+// ------------------------------------------------------------------
+
+body
+	font-size: 12px
+	color: $textColor
+	@include font
+	font-size: 11px
+
+	p
+		line-height: 150%
+		font-size: 14px
+		margin-bottom: 20px
+		@include font
+		
+b
+	@include font
+
+a
+	text-decoration: none
+	color: $corPrincipal
+	+transition
+	@include font
+
+	&:hover
+		color: rgba($corPrincipal,1)
+		text-decoration: none
+
+
+h1, h2, h3, h4, h5, h6
+	@include fontBold
+	margin-bottom: 20px
+	line-height: 110%
+	text-transform: uppercase
+
+
+
+$titleSize: 50px
+h1
+	font-size: $titleSize
+
+h2
+	font-size: $titleSize - 15
+
+h3
+	font-size: $titleSize - 20
+
+h4
+	font-size: $titleSize - 24
+
+h5
+	font-size: $titleSize - 28
+
+h6
+	font-size: $titleSize - 32
+
