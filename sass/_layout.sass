@@ -30,7 +30,7 @@
 		left: 50%
 		top: 50%
 		+fontIcon
-		+scale(3)
+		+scale(1)
 		+transition
 		+box-sizing(border-box)
 		border: 2px solid $brancoCinza
@@ -72,14 +72,14 @@
 			bottom: 0
 
 
-@-webkit-keyframes logo
+@-webkit-keyframes logoTop
 	0%
 		width: 80px
 		height: 80px
 		margin-left: -40px
 		margin-top: -40px
 		top: 50%
-		+scale(3)
+		+scale(1)
 
 	50%
 		top: 20%
@@ -116,7 +116,7 @@
 		margin-left: -40px
 		margin-top: -40px
 		top: 50%
-		+scale(2)
+		+scale(1)
 
 
 @-webkit-keyframes bgLoader
@@ -149,13 +149,12 @@
 		top: 5px
 	100%
 		top: 15px
-	
 
 .pace-done
 	#menu
 		+animate(bgLoader)
 		#logo
-			+animate(logo)
+			+animate($name:logoTop)
 		
 	&.viewing-page-1
 		#cover
@@ -164,7 +163,7 @@
 				.scroll
 					+animate($name: roll, $delay: 2s, $function: infinite)
 
-	&.viewing-page-2, &.viewing-page-3, &.viewing-page-4, &.viewing-page-5, &.viewing-page-6, &.viewing-page-7, &.viewing-page-8
+	&.viewing-page-2, &.viewing-page-3, &.viewing-page-4, &.viewing-page-5, &.viewing-page-6, &.viewing-page-7
 		#menu
 			#logo
 				+animate(logoCenter)
@@ -176,164 +175,108 @@
 // General - home
 // ------------------------------------------------------------------
 
-@-webkit-keyframes title
-	0%
-		opacity: 0
-		-webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
-		transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
-		-webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
-		animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
-	20%
-		opacity: 1
-		-webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
-		transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
-		-webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1)
-		animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1)
-
-	40%
-		opacity: 1
-		-webkit-transform: none
-		transform: none
-
-	60%
-		opacity: 1
-		-webkit-transform: none
-		transform: none
-
-	80%
-		opacity: 0
-		-webkit-transform: scale3d(0.3, 0.3, 0.3)
-		transform: scale3d(0.3, 0.3, 0.3)
-	100%
-		opacity: 0
-
-
-@keyframes title
-	0%
-		opacity: 0
-		-webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
-		transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
-		-webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
-		animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
-	20%
-		opacity: 1
-		-webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
-		transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
-		-webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1)
-		animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1)
-
-	40%
-		opacity: 1
-		-webkit-transform: none
-		transform: none
-
-	60%
-		opacity: 1
-		-webkit-transform: none
-		transform: none
-
-	80%
-		opacity: 0
-		-webkit-transform: scale3d(0.3, 0.3, 0.3)
-		transform: scale3d(0.3, 0.3, 0.3)
-	100%
-		opacity: 0
-
 
 #wrapper
 	& > section
-		background: #db122a
 
-		.title
+		& > .title
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			background: rgba(0,0,0, 0.8)
+			z-index: 100
+			display: none
 			h1
-				font-size: 100px
 				position: absolute
+				font-size: 60px
 				text-align: center
-				left: 0
-				right: 0
+				left: 50%
 				top: 50%
-				display: block
+				+translateY(-50%)
 				+fontBold
+				display: block
 				color: $brancoCinza
-				letter-spacing: -3px
-				margin-top: 150px
-				z-index: 100
+				margin: 10px 70px
+
 
 		.content
-			li
+			a
 				position: absolute
 				overflow: hidden
 				display: block
 				+transition
 				+transition-delay(1s)
 				+transition-duration(1s)
-				width: 0
+				width: auto
+				+box-sizing(border-box)
+				color: $brancoCinza
 
 				&:nth-of-type(1)
 					top: 0
 					bottom: 0
-					left: 50%
+					left: 0
 					right: 50%
 					background: url(img/home-bio.jpg) center center no-repeat
 					+bgCover
 
 				&:nth-of-type(2)
 					top: 0
-					bottom: 50%
 					left: 50%
-					right: 50%
+					bottom: 50%
+					right: 0
 					background: url(img/home-bio.jpg) center center no-repeat
 					+bgCover
 
 				&:nth-of-type(3)
 					top: 50%
-					bottom: 0
 					left: 50%
-					right: 50%
+					bottom: 0
+					right: 25%
 					background: url(img/home-bio.jpg) center center no-repeat
 					+bgCover
 
 				&:nth-of-type(4)
 					top: 50%
+					left: 75%
 					bottom: 0
-					left: 50%
-					right: 50%
+					right: 0
 					background: url(img/home-bio.jpg) center center no-repeat
 					+bgCover
+
+				span.bgDot
+					position: absolute
+					z-index: 1
+					top: 0
+					left: 0
+					bottom: 0
+					right: 0
+					background: rgba(0,0,0,0.4) url(img/bgDot.png)
+
+				article
+					position: absolute
+					z-index: 2
+					left: 50px
+					bottom: 50px
+					right: 50px
+
+					p
+						margin: 0
+
 
 
 
 		&.active
 			.title
-				h1
-					+animate($name: title, $duration: 5s, $delay: 1s)
+				+animate($name: bounceOutUp, $delay: 1.5s)
+				display: block
 			.content
-				li
-					 width: auto
+				a
+					article
+						+animate($name: zoomInUp, $delay: 2s)
 
-					&:nth-of-type(1)
-						top: 0
-						left: 0
-						bottom: 0
-						right: 50%
 
-					&:nth-of-type(2)
-						top: 0
-						left: 50%
-						bottom: 50%
-						right: 0
-
-					&:nth-of-type(3)
-						top: 50%
-						left: 50%
-						bottom: 0
-						right: 25%
-
-					&:nth-of-type(4)
-						top: 50%
-						left: 75%
-						bottom: 0
-						right: 0
 
 
 
