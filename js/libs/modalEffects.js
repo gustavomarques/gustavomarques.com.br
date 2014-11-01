@@ -8,7 +8,6 @@
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
-
 var ModalEffects = (function() {
 
 	function init() {
@@ -22,7 +21,6 @@ var ModalEffects = (function() {
 
 			function removeModal( hasPerspective ) {
 				classie.remove( modal, 'md-show' );
-				classie.remove( modal, 'md-scroll' );
 
 				if( hasPerspective ) {
 					classie.remove( document.documentElement, 'md-perspective' );
@@ -30,13 +28,11 @@ var ModalEffects = (function() {
 			}
 
 			function removeModalHandler() {
-				removeModal( classie.has( el, 'md-setperspective' ) );
+				removeModal( classie.has( el, 'md-setperspective' ) ); 
 			}
 
 			el.addEventListener( 'click', function( ev ) {
 				classie.add( modal, 'md-show' );
-				classie.remove( modal, 'md-scroll' );
-
 				overlay.removeEventListener( 'click', removeModalHandler );
 				overlay.addEventListener( 'click', removeModalHandler );
 
