@@ -233,7 +233,6 @@
 					background-position: center center
 					background-repeat: none
 					+bgCover
-					-webkit-filter: grayscale(1)
 					+scale(1.1)
 
 				article
@@ -277,7 +276,6 @@
 						background: rgba(0,0,0,0.1) url(img/bgDot.png) center center !important
 
 					span.img
-						-webkit-filter: grayscale(0)
 						+scale(1)
 
 					article
@@ -481,11 +479,137 @@
 
 
 #wrapper > section#contact
-	//background: $laranja
+	.content
+		a
+			&:nth-of-type(1)
+				top: 0%
+				left: 50%
+				bottom: 0
+				right: 0
 
+			&:nth-of-type(2)
+				top: 0
+				bottom: 50%
+				left: 0
+				right: 50%
+				pointer-events: none
 
+			&:nth-of-type(3)
+				top: 50%
+				left: 0
+				bottom: 25%
+				right: 87.5%
+				background: #663322
+				h2:before
+					content: "\e60f"
 
+			&:nth-of-type(4)
+				top: 50%
+				left: 12.5%
+				bottom: 25%
+				right: 75%
+				background: #cb2026
+				h2:before
+					content: "\e60d"
 
+			&:nth-of-type(5)
+				top: 50%
+				left: 25%
+				bottom: 25%
+				right: 62.5%
+				background: #005cff
+				h2:before
+					content: "\e612"
+
+			&:nth-of-type(6)
+				top: 50%
+				left: 37.5%
+				bottom: 25%
+				right: 50%
+				background: #28498e
+				h2:before
+					content: "\e60c"
+
+			&:nth-of-type(7)
+				top: 75%
+				left: 0%
+				bottom: 0
+				right: 87.5%
+				background: #007bb6
+				h2:before
+					content: "\e60e"
+
+			&:nth-of-type(8)
+				top: 75%
+				left: 12.5%
+				bottom: 0
+				right: 75%
+				background: #00adef
+				h2:before
+					content: "\e610"
+
+			&:nth-of-type(9)
+				top: 75%
+				left: 25%
+				bottom: 0
+				right: 62.5%
+				background: #d75813
+				h2:before
+					content: "\e618"
+
+			&:nth-of-type(10)
+				top: 75%
+				left: 37.5%
+				bottom: 0
+				right: 50%
+				background: #6e8188
+				h2:before
+					content: "\e614"
+
+			&.blockquote
+				h2
+					+fontText
+					+translate(-50%, -50%)
+					font-size: 40px
+					text-align: center
+					font-style: italic
+					position: absolute
+					top: 50%
+					left: 50%
+					display: block
+					width: 100%
+
+					span
+						display: block
+						margin-top: 10px
+						font-size: 16px
+						text-align: center
+
+			&.contact-button
+				h2
+					+fontText
+					+translate(-50%, -50%)
+					font-size: 20px
+					text-align: center
+					font-style: italic
+					position: absolute
+					top: 50%
+					left: 50%
+					display: block
+					width: 100%
+
+					&:before
+						+transition
+						+fontIcon
+						font-size: 50px
+						display: block
+						text-align: center
+						height: 0
+						overflow: hidden
+
+				&:hover
+					h2:before
+						height: 60px
 
 
 
