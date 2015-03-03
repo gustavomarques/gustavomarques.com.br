@@ -160,6 +160,7 @@
 		#cover
 			.roll
 				+animate($name: zoomInDown, $delay: 1s)
+
 				.scroll
 					+animate($name: roll, $delay: 2s, $function: infinite)
 
@@ -167,7 +168,6 @@
 		#menu
 			#logo
 				+animate(logoCenter)
-
 
 
 
@@ -296,8 +296,6 @@
 				right: 50%
 				span.bgDot
 					background: rgba(0,0,0,0.3) url(img/bgDot.png) center center
-				span.img
-					-webkit-filter: grayscale(0)
 
 			&:nth-of-type(2)
 				top: 0
@@ -422,7 +420,6 @@
 
 #wrapper > section#about
 	//background: $vermelho
-
 
 
 
@@ -565,6 +562,14 @@
 				background: #6e8188
 				h2:before
 					content: "\e614"
+
+			&:nth-of-type(n+3)
+				article
+					left: 10px
+					right: 10px
+					top: 10px
+					bottom: 10px
+
 
 			&.blockquote
 				h2

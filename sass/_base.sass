@@ -39,7 +39,7 @@ $corScroll: $corPrincipal
 $corFundoScroll: $cinzaEscuro
 
 ::-webkit-scrollbar 
-	width: 3px
+	width: 20px
 	height: 0px
 	margin: 0px 0px 0px 0px
 
@@ -132,23 +132,23 @@ $default-box-shadow-inset: false
 body
 	font-size: 12px
 	color: $textColor
-	@include font
+	+fontText
 	font-size: 11px
 
 	p
 		line-height: 200%
 		font-size: 16px
 		margin-bottom: 20px
-		@include font
+		+fontText
 		
-b
-	@include font
+b, strong
+	+fontText(700)
 
 a
 	text-decoration: none
 	color: $corPrincipal
 	+transition
-	@include font
+	+fontText
 
 	*
 		+transition
@@ -159,7 +159,7 @@ a
 
 
 h1, h2, h3, h4, h5, h6
-	@include fontBold
+	+fontBold
 	margin-bottom: 20px
 	line-height: 110%
 

@@ -12,21 +12,21 @@ input
 	+border-radius(5px)
 
 
-
 input, input[type="text"], select, textarea, .ms-parent > button
 	+border-radius(5px)
 	+box-sizing(border-box)
 	display: block
 	float: none
 	position: relative
-	font-size: 15px
-	padding: 0 10px
+	font-size: 20px
+	padding: 10px 20px
 	border: 2px solid $cinzaClaro
 	text-indent: 0
 	color: $cinzaClaro
 	width: 100%
-	min-height: 35px
-	line-height: 35px
+	min-height: 51px
+	line-height: 31px
+	+font
 
 	&:focus
 		border-color: $preto
@@ -36,10 +36,10 @@ input[type="text"]
 	background: $branco
 
 textarea
-	min-height: 60px
+	min-height: 120px
 
 @mixin button3d
-	padding: 8px 20px 12px 20px
+	padding: 14px 30px 16px 30px
 	font-size: 20px
 	line-height: 20px
 	text-decoration: none
@@ -53,6 +53,7 @@ textarea
 	+border-radius(5px)
 	+box-shadow(rgba($black, 0.1) 0 -5px 0 inset)
 	+transition
+	+font
 	opacity: 0.9
 
 	&:hover

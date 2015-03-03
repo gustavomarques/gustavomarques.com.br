@@ -13,6 +13,15 @@
 		el.innerHTML = '<span style="font-family: \'guto\'">' + entity + '</span>' + html;
 	}
 	var icons = {
+		'icon-arrow-left': '&#xf060;',
+		'icon-arrow-right': '&#xf061;',
+		'icon-arrow-up': '&#xf062;',
+		'icon-arrow-down': '&#xf063;',
+		'icon-asterisk': '&#xf069;',
+		'icon-chevron-up': '&#xf077;',
+		'icon-chevron-down': '&#xf078;',
+		'icon-thumbs-o-up': '&#xf087;',
+		'icon-thumbs-o-down': '&#xf088;',
 		'icon-quote-left': '&#xf10d;',
 		'icon-quote-right': '&#xf10e;',
 		'icon-phone': '&#xe618;',

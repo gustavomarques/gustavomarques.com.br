@@ -27,19 +27,7 @@ $(document).ready(function(){
 	$("#wrapper").onepage_scroll({
 		sectionContainer: "section",
 		responsiveFallback: 600,
-		loop: true
+		loop: false
 	});
-
-	$( '#btUser' ).click( function(){
-		if( $(this).hasClass('open') ){
-			$('#userNav').stop().animate({left : '-240px'}, 300);
-			$(this).removeClass('open');
-		}else{
-			$('#userNav').stop().animate({left : '0'}, 200);
-			$(this).addClass('open');
-		}
-
-		return false
-	});
-
 });
+

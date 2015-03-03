@@ -4,13 +4,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Home - Gustavo Marques - Strategy design + innovation</title>
+	<title> - Gustavo Marques - Strategy design + innovation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style-home.css">
 
 	<!--[if IE]>
 		<link rel="stylesheet" href="ie.css">
@@ -18,7 +17,7 @@
 
 </head>
 
-<body id="home">
+<body id="">
 
 <!--[if lt IE 11]>
 <div id="ieWrapper">
@@ -49,7 +48,7 @@
 
 
 
-<!--<section id="home">-->
+<!--<section id="">-->
 
 
 <div id="menu">
@@ -58,6 +57,35 @@
 		<span id="nome">Gustavo Marques</span>
 		<span id="label">strategy design + innovation</span>
 	</a>
+	
+	<!--
+	<nav>
+		<ul>
+			<li><h1>About me</h1></li>
+			<li><a href="" title="">Home.</a></li>
+			<li><a href="" title="">Bio.</a></li>
+			<li><a href="" title="">Portfolio.</a></li>
+			<li><a href="" title="">Resume.</a></li>
+			<li><a href="" title="">Services.</a></li>
+		</ul>
+		
+		<ul>
+			<li><h1>My startups</h1></li>
+			<li><a href="" title="">Waaav.</a></li>
+			<li><a href="" title="">Skink.</a></li>
+			<li><a href="" title="">Mamom.</a></li>
+			<li><a href="" title="">Erwa.</a></li>
+			<li><a href="" title="">Amp.</a></li>
+			<li><a href="" title="">Sexalize.</a></li>
+			
+		</ul>
+
+		<ul>
+			<li><h1>Contact me</h1></li>
+			
+		</ul>
+	</nav>
+	-->
 </div>
 
 
@@ -105,8 +133,8 @@
 				<span class="bgDot"></span>
 				<span class="img" style="background-image: url(img/home-process.jpg);"></span>
 				<article>
-					<h1>Process.</h1>
-					<p>View my work process and take a new experience.</p>
+					<h1>Services.</h1>
+					<p>Take new experience for the sames services.</p>
 				</article>
 			</a>
 		</nav>
@@ -209,7 +237,7 @@
 				<span class="img" style="background-image: url(img/home-quote.jpg);"></span>
 				<article>
 					<h1>Quote.</h1>
-					<p>Told your problem and I develop your solution.</p>
+					<p>Begin your project with amazing quotation experience.</p>
 				</article>
 			</a>
 
@@ -320,10 +348,16 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 	<script src="js/libs/pace.min.js"></script>
 	<script src="js/libs/jquery.onepage-scroll.min.js"></script>
-	<script src="js/libs/classie.js"></script>
-	<script src="js/libs/modalEffects.js"></script>
 
-	<script src="js/script.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#wrapper").onepage_scroll({
+				sectionContainer: "section",
+				responsiveFallback: 600,
+				loop: false
+			});
+		});
+	</script>
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
 	<script src="js/libs/waypoints.min.js"></script>
